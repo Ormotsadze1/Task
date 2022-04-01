@@ -1,7 +1,6 @@
 #output those months that have exactly 30 days
-
+NUMBER = 30
 class Year
-  NUMBER = 30
   def month
     months = {
       "January" => 31,
