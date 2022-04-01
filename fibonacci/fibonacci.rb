@@ -1,7 +1,6 @@
 #Fill the array with Fibonacci numbers up to 100
-
+Max = 100
 class Numbers
-  Max = 100
   def fibonacci
     arr = [1,1]
     while arr.size <= Max
