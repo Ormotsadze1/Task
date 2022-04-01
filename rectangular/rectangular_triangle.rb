@@ -1,7 +1,8 @@
 #Rectangular,isosceles and equilateral triangle.
 
+NUMBER = 2
+
 class Rectangular
-  NUMBER = 2
   def initialize
     puts "First side?"
     @side1 = gets.chomp.to_i
