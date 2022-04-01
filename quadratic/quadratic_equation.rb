@@ -1,9 +1,10 @@
 #A quadratic equation
 
+NUMBER2 = 2
+NUMBER4 = 4
+ZERO = 0
+
 class Quadratic
-  NUMBER2 = 2
-  NUMBER4 = 4
-  ZERO = 0
   def initialize
     puts "input first coefficient"
     @coef1 = gets.chomp.to_i
