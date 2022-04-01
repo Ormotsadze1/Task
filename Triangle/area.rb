@@ -1,7 +1,6 @@
 #The area of a triangle.
-
+NUMBER = 2
 class Area
-  NUMBER = 2
   def initialize
     puts "What is the base of a triangle?"
     @base = gets.chomp.to_i
