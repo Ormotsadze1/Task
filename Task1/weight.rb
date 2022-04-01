@@ -1,7 +1,6 @@
 #ideal weight
-
+MARGIN = 110
 class Ideal
-  MARGIN = 110
   def initialize
     puts "Enter your name: "
     @name = gets.chomp.capitalize
