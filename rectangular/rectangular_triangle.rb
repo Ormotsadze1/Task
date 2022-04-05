@@ -1,31 +1,60 @@
-#Rectangular,isosceles and equilateral triangle.
+# frozen_string_literal: true
 
-NUMBER = 2
+# Rectangular,isosceles and equilateral triangle.
+class RectangularTRiangle
+  SQUARER = 2
 
-class Rectangular
   def initialize
-    puts "First side?"
+    puts 'First side?'
     @side1 = gets.chomp.to_i
-    puts "Second side?"
+    puts 'Second side?'
     @side2 = gets.chomp.to_i
-    puts "Third side?"
+    puts 'Third side?'
     @side3 = gets.chomp.to_i
+    @sides = [@side1, @side2, @side3].sort
   end
 
-  def triangle
-    arr = [@side1, @side2, @side3].sort
-    if @side1 && @side2 == @side3
-      puts "Equilateral triangle"
-    elsif (arr[0] ** NUMBER + arr[1] ** NUMBER == arr[2] ** NUMBER) && arr[0] == arr[1]
-      puts "Rectangular isosceles triangle"
-    elsif arr[0] ** NUMBER + arr[1] ** NUMBER == arr[2] ** NUMBER
-      puts "Rectangular triangle"
-    elsif @side1 == @side2 || @side1 == @side3 || @side2 == @side3
-      puts "Isosceles triangle"
-    else
-      puts "Unknown triangle"
-    end
+  def call
+    validate_parameteres
+    equilateral
+    isosceles
+    reqtangular
+  end
+
+  def validate_parameteres
+    return unless @sides.include? 0
+
+    warn 'wrong parameters for triangle'
+    exit 1
+  end
+
+  def equilateral
+    return unless @side1 && @side2 == @side3
+
+    puts 'Equilateral triangle'
+    exit 1
+  end
+
+  def isosceles
+    return unless @side1 == @side2 || @side1 == @side3 || @side2 == @side3
+
+    puts 'Isosceles triangle'
+    exit 1
+  end
+
+  def reqtangular
+    return unless @sides[0]**SQUARER + @sides[1]**SQUARER == @sides[2]**SQUARER
+
+    puts 'Rectangular triangle'
+    exit 1
+  end
+
+  def rectangular_isosceles
+    return unless equilateral && isosceles
+
+    puts 'Rectangular isosceles triangle'
+    exit 1
   end
 end
 
-Rectangular.new.triangle
+RectangularTRiangle.new.call
