@@ -3,6 +3,7 @@
 # display the ideal weight using the formula <height> - 110
 class IdealWeight
   SUBSTRACTOR = 110
+  EDGE = 0
 
   def initialize
     puts 'Enter your name: '
@@ -19,7 +20,7 @@ class IdealWeight
   private
 
   def validate_parameters
-    return unless @height.to_i.negative? || @height.count('a-zA-Z').positive?
+    return unless @height.to_i <= EDGE || @height.count('a-zA-Z').positive?
 
     warn 'incorrect input for height!'
     exit 1
