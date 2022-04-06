@@ -4,6 +4,7 @@
 class CalculateTriangleAreaService
   DIVIDER = 2
   EDGE = 0
+  ALPHABETICS = 'a-zA-Z'
 
   def initialize
     puts 'What is the base of a triangle?'
@@ -21,14 +22,14 @@ class CalculateTriangleAreaService
   private
 
   def validate_base_parameter
-    return unless @base.to_i <= EDGE || @base.count('a-zA-Z').positive?
+    return unless @base.to_i <= EDGE || @base.count(ALPHABETICS).positive?
 
     warn 'wrong input for base'
     exit 1
   end
 
   def validate_height_parameter
-    return unless @height.to_i <= EDGE || @height.count('a-zA-Z').positive?
+    return unless @height.to_i <= EDGE || @height.count(ALPHABETICS).positive?
 
     warn 'wrong input for height'
     exit 1
@@ -40,3 +41,5 @@ class CalculateTriangleAreaService
 end
 
 puts CalculateTriangleAreaService.new.call
+
+
