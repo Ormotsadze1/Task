@@ -18,3 +18,4 @@ class Ordinal_number
 end
 
 puts Ordinal_number.new.date
+
