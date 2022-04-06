@@ -21,3 +21,4 @@ class Year
 end
 
 puts Year.new.month
+
