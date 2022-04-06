@@ -58,3 +58,4 @@ class RectangularTRiangle
 end
 
 RectangularTRiangle.new.call
+
