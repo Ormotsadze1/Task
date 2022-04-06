@@ -42,4 +42,3 @@ end
 
 Shop.new.order_details
 
-
