@@ -30,3 +30,4 @@ class Quadratic
 end
 
 puts Quadratic.new.equation
+
