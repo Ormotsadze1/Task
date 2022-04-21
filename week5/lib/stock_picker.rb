@@ -84,3 +84,4 @@ class StockPickerService
 end
 
 p StockPickerService.new(8).call
+
